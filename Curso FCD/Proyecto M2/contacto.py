@@ -25,10 +25,10 @@ def chk_tel(telefono):
         return 0
     else:
         return telefono
-def datosPruebaContacto():
+def datosPruebaContacto():              #se define una función que retorna datos de prueba para un contacto
     return ("Lucas","+5699999999","lucas@ale.cl","Camino 1559")
     
-class Contacto:
+class Contacto:                     #se define la clase contacto basado en nombre, teléfono, mail y dirección
 
     def __init__(self, nombre: str, telefono: str, mail: str, direccion: str):
         self.nombre = nombre
@@ -36,9 +36,9 @@ class Contacto:
         self.mail= mail
         self.direccion = direccion
 
-    def mostrar(self):
+    def mostrar(self):          #función para mostrar los datos del contacto. retorna un string con los datos en lugar de imprimirlos
         #print(f"Nombre: {self.nombre} | Teléfono: {self.telefono} | Mail: {self.mail} | Dirección: {self.direccion}")
         return (f"Nombre: {self.nombre} | Teléfono: {self.telefono} | Mail: {self.mail} | Dirección: {self.direccion}")
         
-    def getTelefono(self):
+    def getTelefono(self):    #función que retorna el teléfono del contacto. será útil por cómo la agenda usa el teléfono como clave única
         return(self.telefono)
